@@ -9,7 +9,7 @@ import time
 import requests
 import socket
 import json
-import config
+from module import config
 
 
 def auto_connect():
@@ -53,7 +53,7 @@ def is_logged_in():
         requests.get("https://baidu.com", timeout=2)
         print("网络连接正常")
         return True
-    except Exception as e:
+    except requests.ConnectionError as e:
         print(e)
         print("网络异常，需要登录")
         return False
