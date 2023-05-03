@@ -21,8 +21,7 @@ def auto_connect():
     print("网络已连接")
     # if Wi-Fi need login
     if not is_logged_in():
-        login(config.user_account(), config.user_password())
-    # mywifi.login(config.user_account(), config.user_password())
+        login()
 
 
 def is_connected():
@@ -53,16 +52,18 @@ def is_logged_in():
         requests.get("https://baidu.com", timeout=2)
         print("网络连接正常")
         return True
-    except requests.ConnectionError as e:
-        print(e)
+    except requests.ConnectionError:
+        # print(e)
         print("网络异常，需要登录")
         return False
 
 
-def login(account, password):
+def login():
     r = f"https://s2.scut.edu.cn:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&"\
-        f"user_account=,0,{account}&user_password={password}&wlan_user_ip={get_local_ip()}&"\
-        f"wlan_user_ipv6=&wlan_user_mac=000000000000&wlan_ac_ip=172.25.0.50&wlan_ac_name=AC&"\
+        f"user_account=,0,{config.user_account()}&user_password={config.user_password()}&" \
+        f"wlan_user_ip={get_local_ip()}&"\
+        f"wlan_user_ipv6=&wlan_user_mac=000000000000&" \
+        f"wlan_ac_ip=172.25.0.50&wlan_ac_name=AC&"\
         f"jsVersion=3.3.2&v=1818"
 
     headers = {

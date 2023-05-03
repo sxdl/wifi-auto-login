@@ -25,12 +25,28 @@ def read_json(path):
 
 
 def user_account():
-    return config.get('user_account')
+    return config.get('user').get('user_account')
 
 
 def user_password():
-    return config.get('user_password')
+    return config.get('user').get('user_password')
 
 
 def ssid():
     return config.get('ssid')
+
+
+def wlan_ac_ip():
+    pass
+
+
+def url():
+    return config.get('request').get('url')
+
+
+def prams():
+    return config.get('request').get('prams')
+
+
+def headers():
+    return config.get('request').get('headers')

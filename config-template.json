@@ -1,5 +1,7 @@
 {
   "ssid": "",
-  "user_account": "",
-  "user_password": ""
+  "user": {
+    "user_account": "",
+    "user_password": ""
+  }
 }
