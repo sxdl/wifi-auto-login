@@ -1,9 +1,9 @@
 {
-  "ssid": "",
+  "ssid": "scut-student",
   "url": "",
   "headers": {
-    "Host": "",
-    "Referer": "",
+    "Host": "s2.scut.edu.cn:801",
+    "Referer": "https://s2.scut.edu.cn/",
     "User-Agent": ""
   }
 }
