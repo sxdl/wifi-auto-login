@@ -3,7 +3,16 @@
 华工校园网自动连接并登录，修改`module.mywifi.py`中的 request url 可以登录其他无线Wi-Fi portal.
 
 # 快速开始
+## 克隆代码仓库
+```shell
+git clone https://github.com/sxdl/wifi-auto-login.git
+```
+```shell
+cd wifi-auto-login
+```
+
 ## 安装依赖
+
 ```shell
 pip install -r requirements.txt
 ```
