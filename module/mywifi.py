@@ -59,6 +59,9 @@ def is_logged_in():
 
 
 def login():
+    url = config.url()
+    headers = config.headers()
+    '''
     r = f"https://s2.scut.edu.cn:801/eportal/?c=Portal&a=login&callback=dr1003&login_method=1&"\
         f"user_account=,0,{config.user_account()}&user_password={config.user_password()}&" \
         f"wlan_user_ip={get_local_ip()}&"\
@@ -72,8 +75,9 @@ def login():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
                       '(KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.64'
     }
+    '''
 
-    q = requests.get(url=r, headers=headers).text[7:-1]
+    q = requests.get(url=url, headers=headers).text[7:-1]
     re = json.loads(q)
     print(f"result: {re['result']}, msg: {re['msg']}")
 

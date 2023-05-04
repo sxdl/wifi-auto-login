@@ -1,7 +1,9 @@
 {
   "ssid": "",
-  "user": {
-    "user_account": "",
-    "user_password": ""
+  "url": "",
+  "headers": {
+    "Host": "",
+    "Referer": "",
+    "User-Agent": ""
   }
 }

@@ -41,7 +41,7 @@ def wlan_ac_ip():
 
 
 def url():
-    return config.get('request').get('url')
+    return config.get('url')
 
 
 def prams():
@@ -49,4 +49,4 @@ def prams():
 
 
 def headers():
-    return config.get('request').get('headers')
+    return config.get('headers')
