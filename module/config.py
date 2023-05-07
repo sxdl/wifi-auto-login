@@ -5,6 +5,7 @@ description:
 """
 import json
 import os
+import socket
 
 config = {}
 
@@ -41,12 +42,20 @@ def wlan_ac_ip():
 
 
 def url():
-    return config.get('url')
+    return config.get('request').get('url')
 
 
-def prams():
-    return config.get('request').get('prams')
+def params():
+    auto_ip = config.get('auto_ip')
+    p = config.get('request').get('params')
+    if auto_ip != "":
+        p[auto_ip] = get_local_ip()
+    return p
 
 
 def headers():
-    return config.get('headers')
+    return config.get('request').get('headers')
+
+
+def get_local_ip():
+    return socket.gethostbyname(socket.gethostname())

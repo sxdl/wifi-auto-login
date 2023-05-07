@@ -1,9 +1,29 @@
 {
   "ssid": "scut-student",
-  "url": "",
-  "headers": {
-    "Host": "s2.scut.edu.cn:801",
-    "Referer": "https://s2.scut.edu.cn/",
-    "User-Agent": ""
+  "auto_ip": "wlan_user_ip",
+  "request":
+  {
+    "url": "https://s2.scut.edu.cn:801/eportal/",
+    "params":
+    {
+      "c": "Portal",
+      "a": "login",
+      "callback": "dr1003",
+      "login_method": "1",
+      "user_account": ",0,",
+      "user_password": "",
+      "wlan_user_ip": "",
+      "wlan_user_ipv6": "",
+      "wlan_user_mac": "000000000000",
+      "wlan_ac_ip": "xxx.xx.xx.xx",
+      "wlan_ac_name": "AC",
+      "jsVersion": "3.3.2"
+    },
+    "headers":
+    {
+      "Host": "s2.scut.edu.cn:801",
+      "Referer": "https://s2.scut.edu.cn/",
+      "User-Agent": ""
+    }
   }
 }
